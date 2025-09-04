@@ -5,25 +5,45 @@
   <title>Thanks — FeedGuardian</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://docs.google.com">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 text-gray-900">
-  <main class="max-w-xl mx-auto px-6 py-10">
+  <main role="main" class="max-w-xl mx-auto px-6 py-10">
     <div class="bg-white rounded-2xl shadow-sm p-7">
+      <div class="inline-flex items-center gap-2 text-green-700">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M20 7L9 18l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="font-medium">Payment confirmed</span>
+      </div>
+
       <h1 class="text-2xl font-bold">Payment received — you’re in the queue</h1>
       <p class="mt-3 text-gray-700">
         Thanks for trusting FeedGuardian. To begin immediately, please complete the short intake form below.
         We’ll deliver your Evidence Pack in ~24 hours and file your appeal within 24–48 hours after your approval.
       </p>
 
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHGUm7AtJxzUjpR0J-9taHkPBStx_J-b5D7zQw-GfkSu1UKA/viewform?usp=header" target="_blank" rel="noopener"
-         class="inline-block mt-6 px-5 py-3 rounded-lg bg-blue-600 text-white font-medium">
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSdHGUm7AtJxzUjpR0J-9taHkPBStx_J-b5D7zQw-GfkSu1UKA/viewform"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="w-full md:w-auto inline-block mt-6 px-5 py-3 rounded-lg bg-blue-600 text-white font-medium"
+        aria-label="Open Paid Intake Form (opens in a new tab)"
+      >
         Open Paid Intake Form
+      </a>
+
+      <a
+        href="https://alexatanassov.github.io/feedguardian-landing/"
+        class="w-full md:w-auto inline-block mt-3 ml-0 md:ml-2 px-4 py-3 rounded-lg bg-gray-200 text-gray-900 font-medium"
+      >
+        Back to landing
       </a>
 
       <div class="mt-6 space-y-2 text-gray-700">
         <p class="font-semibold">What happens next:</p>
-        <ol class="list-decimal ml-6 space-y-1">
+        <ol class="list-decimal pl-5 md:pl-6 space-y-1">
           <li>We run a parity + schema + policy scan across 3–5 SKUs and your returns/contact pages.</li>
           <li>You receive a timestamped Evidence PDF + draft appeal for approval.</li>
           <li>We submit the appeal and keep you updated on review status.</li>
@@ -38,7 +58,7 @@
 
     <footer class="text-xs text-gray-500 mt-6">
       © <span id="y"></span> FeedGuardian
-      <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+      <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
     </footer>
   </main>
 </body>
