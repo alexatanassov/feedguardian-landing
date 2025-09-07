@@ -1,0 +1,13 @@
+[Reply 1]
+Quick triage I run for GMC misrepresentation:
+1) Feed ↔ PDP parity on price/availability/variant (3–5 SKUs; timestamped screenshots).
+2) Schema JSON-LD Product/Offer present + consistent.
+3) Policy-risk phrases (claims/guarantees) softened/removed sitewide (PDP/returns/checkout).
+4) Business info parity (returns address / email / phone) consistent sitewide.
+If you want, I can run a free 24-hour scan and send a PDF with screenshots + an appeal outline. Link in my profile.
+
+[Reply 2]
+Common causes of “price mismatch”: caching (app banners), variant selection defaulting to higher price, currency widgets, or hidden taxes/shipping. I screenshot PDP + returns + schema, align to feed, then draft an appeal with clause citations. Happy to run a free scan.
+
+[Reply 3]
+If your appeal failed, include (a) timestamped parity screenshots (3–5 SKUs), (b) schema snippet with Offer/price/availability, (c) precise policy citations, and (d) summary of changes made. I can prep the evidence pack in 24h if helpful.

@@ -1,0 +1,26 @@
+Subject: Request for Re-Review – Google Merchant Center Account {{Account ID}}
+
+Hello GMC Team,
+
+We acknowledge the policy related to {{Issue Type, e.g., Misrepresentation}}. We have corrected the root causes and now comply as follows:
+
+1) Price/Availability Parity
+- SKUs {{SKU1..SKUn}} verified on {{DATE/TIME}} with attached screenshots show PDP price/availability matching our feed values.
+
+2) Schema Consistency
+- Product + Offer schema updated to reflect price, availability, and identifiers accurately (snippet included in evidence pack).
+
+3) Policy Language & Business Info
+- We removed/softened claim language and aligned returns/contact details sitewide. Screenshots attached.
+
+Attachments:
+- PDP screenshots (price/availability/variant) for {{#}} SKUs
+- Returns policy page screenshots
+- Schema snippet (Product/Offer)
+- Summary of changes
+
+We respectfully request a re-review.
+
+Thank you,
+{{Your Name}} – FeedGuardian
+{{Contact Email}}

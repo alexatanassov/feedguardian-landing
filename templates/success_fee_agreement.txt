@@ -1,0 +1,12 @@
+FeedGuardian Success-Fee Agreement
+
+Client: {{Client Legal Name}}
+Service: Google Merchant Center Rescue (scan, evidence pack, appeal drafting & submission, up to 1 follow-up)
+Term: 30 days or until decision.
+Fee: $400 due only if account is reinstated (measured by platform decision notice).
+Exclusions: Major site rebuilds, feed re-architecture, GTIN procurement or data entry > 30 minutes.
+Client will provide necessary admin access or screenshots and confirm all information is accurate.
+Governing law: {{Your State/Country}}.
+
+Client Signature: _____________________  Date: ____________
+Provider Signature: ___________________  Date: ____________
