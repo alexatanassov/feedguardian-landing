@@ -1,0 +1,54 @@
+name: Site smoke tests
+
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: "17 7 * * *"  # daily at 07:17 UTC
+  workflow_dispatch: {}     # allow manual run
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Define site base
+        id: vars
+        run: |
+          echo "BASE=https://alexatanassov.github.io/feedguardian-landing" >> $GITHUB_ENV
+
+      - name: Check homepage (200 + content)
+        run: |
+          set -euo pipefail
+          CODE=$(curl -s -o /dev/null -w "%{http_code}" "$BASE/?_cb=$RANDOM")
+          echo "Home HTTP: $CODE"
+          test "$CODE" = "200"
+          curl -s "$BASE/?_cb=$RANDOM" | grep -qi "Google Merchant Center Rescue in 48 hours"
+
+      - name: Check privacy page
+        run: |
+          set -euo pipefail
+          URL="$BASE/privacy.html?_cb=$RANDOM"
+          CODE=$(curl -s -o /dev/null -w "%{http_code}" "$URL")
+          echo "Privacy HTTP: $CODE"
+          test "$CODE" = "200"
+          curl -s "$URL" | grep -qi "<h1>Privacy Policy</h1>"
+
+      - name: Check terms page
+        run: |
+          set -euo pipefail
+          URL="$BASE/terms.html?_cb=$RANDOM"
+          CODE=$(curl -s -o /dev/null -w "%{http_code}" "$URL")
+          echo "Terms HTTP: $CODE"
+          test "$CODE" = "200"
+          curl -s "$URL" | grep -qi "<h1>Terms of Service</h1>"
+
+      - name: Check favicons exist (200)
+        run: |
+          set -euo pipefail
+          for f in 32 48 96 180; do
+            URL="$BASE/landing/feedguardian_favicon_${f}.png?_cb=$RANDOM"
+            CODE=$(curl -s -o /dev/null -w "%{http_code}" -I "$URL")
+            echo "favicon ${f}px HTTP: $CODE"
+            test "$CODE" = "200"
+          done
