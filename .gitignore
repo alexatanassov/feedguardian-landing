@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# Python
+**/__pycache__/
+**/*.pyc
+
+# Virtual envs
+**/.venv/
+
+# Local evidence/output
+**/evidence/
+*.zip
+
+# Secrets
+**/.env
+**/crawler_config/*.env
